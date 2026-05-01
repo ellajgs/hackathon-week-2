@@ -18,33 +18,42 @@ function playGame(e) {
     
     const playerChoice =e.target.id
     const writePlayerChoice = document.querySelector("#play-choice")
+    const writeResult = document.querySelector('#resultDisplay')
 
     
-    // const result = getResult(playerChoice, computerChoice)
+    
     // resultDisplay.textContent = result
     writePlayerChoice.textContent = `PLAYER: ${playerChoice}`
     writeComputerChoice.textContent = `COMPUTER: ${computerChoice}`
+    writeResult.textContent = `RESULT: ${result}`
+    
+    
+
+    const result = (playerChoice, computerChoice) => {
+    
+  if (playerChoice === "rock" && computerChoice === "scissors") {
+    return "Player 1 won!";
+  } else if (playerChoice === "rock" && computerChoice === "paper") {
+    return "Player 2 won!";
+  } else if (playerChoice === "rock" && computerChoice === "rock") {
+    return "Draw!";
+  } else if (playerChoice === "scissors" && computerChoice === "paper") {
+    return "Player 1 won!";
+  } else if (playerChoice === "scissors" && computerChoice === "scissors") {
+    return "Draw!";
+  } else if (playerChoice === "scissors" && computerChoice === "rock") {
+    return "Player 2 won!";
+  } else if (playerChoice === "paper" && computerChoice === "paper") {
+    return "Draw!";
+  } else if (playerChoice === "paper" && computerChoice === "scissors") {
+    return "Player 2 won!";
+  } else if (playerChoice === "paper" && computerChoice === "rock") {
+    return "Player 1 won!";
+  }
+};
 
 }
 
-// const rps = (p1, p2) => {
-//   if (p1 === "rock" && p2 === "scissors") {
-//     return "Player 1 won!";
-//   } else if (p1 === "rock" && p2 === "paper") {
-//     return "Player 2 won!";
-//   } else if (p1 === "rock" && p2 === "rock") {
-//     return "Draw!";
-//   } else if (p1 === "scissors" && p2 === "paper") {
-//     return "Player 1 won!";
-//   } else if (p1 === "scissors" && p2 === "scissors") {
-//     return "Draw!";
-//   } else if (p1 === "scissors" && p2 === "rock") {
-//     return "Player 2 won!";
-//   } else if (p1 === "paper" && p2 === "paper") {
-//     return "Draw!";
-//   } else if (p1 === "paper" && p2 === "scissors") {
-//     return "Player 2 won!";
-//   } else if (p1 === "paper" && p2 === "rock") {
-//     return "Player 1 won!";
-//   }
-// };
+
+
+  
