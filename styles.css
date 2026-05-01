@@ -1,3 +1,8 @@
+body{
+    background-color:lightblue;
+    font-family: arial;
+}
+
 h1{
     text-align:center
 }
@@ -27,3 +32,22 @@ h3{
 
 }
 
+#texts{
+    display:flex;
+    padding:10px;
+    margin-top: 30px;
+    gap:20px;
+   
+}
+
+.textName{
+    float:left;
+    background-color: white;
+    padding:10px;
+    border-radius:5px
+}
+
+#scores{
+    display:flex;
+    justify-content: space-between;
+}
