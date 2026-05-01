@@ -4,16 +4,26 @@
   const scissorsBtn = document.querySelector("#scissors");
   const playerOptions = [rockBtn, paperBtn, scissorsBtn];
   const computerOptions = ["rock", "paper", "scissors"];
+  const choices = document.querySelector("#choices")
+
 
   playerOptions.forEach(option => {
     option.addEventListener("click", playGame)
   })
 
-function playGame() {
+function playGame(e) {
     const randomNum = Math.floor(Math.random() * computerOptions.length )
-    const computerChoice = computerOptions[randomNum]
+    const computerChoice = computerOptions[randomNum] 
+    const writeComputerChoice = document.querySelector("#computer-choice")
     
+    const playerChoice = choices[e.target.id]
+    const writePlayerChoice = document.querySelector("#play-choice")
+
     
+    // const result = getResult(playerChoice, computerChoice)
+    // resultDisplay.textContent = result
+    writePlayerChoice.textContent = `PLAYER: ${playerChoice}`
+    writeComputerChoice.textContent = `COMPUTER: ${computerChoice}`
 
 }
 
