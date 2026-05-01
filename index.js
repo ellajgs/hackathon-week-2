@@ -20,11 +20,11 @@ function playGame(e) {
   const computerChoice = computerOptions[randomNum];
   const writeComputerChoice = document.querySelector("#computer-choice");
 
-  const playerChoice = e.target.id;
+  const playerChoice = e.currentTarget.id;
   const writePlayerChoice = document.querySelector("#play-choice");
   const writeResult = document.querySelector("#resultDisplay");
 
-  // resultDisplay.textContent = result
+  
   writePlayerChoice.textContent = `PLAYER: ${playerChoice}`;
   writeComputerChoice.textContent = `COMPUTER: ${computerChoice}`;
 
@@ -32,6 +32,8 @@ function playGame(e) {
   writeResult.textContent = `RESULT: ${result}`;
   playerScoreDisplay.textContent = playerScore
   computerScoreDisplay.textContent = computerScore
+
+}
 function score(playerChoice, computerChoice) {
   let result = "";
   if (playerChoice === "rock" && computerChoice === "scissors") {
@@ -60,5 +62,4 @@ function score(playerChoice, computerChoice) {
     playerScore++
   }
   return result;
-}
 }
