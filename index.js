@@ -16,7 +16,7 @@ function playGame(e) {
     const computerChoice = computerOptions[randomNum] 
     const writeComputerChoice = document.querySelector("#computer-choice")
     
-    const playerChoice = choices[e.target.id]
+    const playerChoice =e.target.id
     const writePlayerChoice = document.querySelector("#play-choice")
 
     
